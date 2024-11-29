@@ -8,4 +8,5 @@
         public string CollegeProgram { get; set; }
         public string YearInProgram { get; set; }
     }
+    // other classes for other tables
 }
