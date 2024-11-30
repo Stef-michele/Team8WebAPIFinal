@@ -3,10 +3,10 @@
     public class TeamMember
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
+        public required string FullName { get; set; }
         public DateTime Birthdate { get; set; }
-        public string CollegeProgram { get; set; }
-        public string YearInProgram { get; set; }
+        public required string CollegeProgram { get; set; }
+        public required string YearInProgram { get; set; }
     }
-    // other classes for other tables
+    // other classes for other tables- or new files?
 }
