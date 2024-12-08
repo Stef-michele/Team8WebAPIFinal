@@ -27,7 +27,7 @@ namespace Team8WebAPIFinal.Data
                 },
                 new TeamMember
                 {
-                    Id = 15380296,
+                    Id = 2,
                     FullName = "Cadence Hicks",
                     Birthdate = new DateTime(2004, 08, 19),
                     CollegeProgram = "Information Technologies",
@@ -40,7 +40,7 @@ namespace Team8WebAPIFinal.Data
             modelBuilder.Entity<FavoriteShow>().HasData(
                 new FavoriteShow
                 {
-                    Id = 1,
+                    Id = 2,
                     ReleaseYear = 1963,
                     Title = "Doctor Who",
                     Genre = "Sci-Fi",
@@ -78,9 +78,15 @@ namespace Team8WebAPIFinal.Data
                     Type = "Savory",
                     IsHealthy = false,
                     Description = "Poached eggs and Canadian Bacon on English Muffins with Hollandaise."
-                }
+                },
 
-                //laste persons data here, will need comma above
+                new FavoriteBreakfastFood
+                {
+                    Id = 2,
+                    Name = "Crepe",
+                    Type = "Sweet",
+                    IsHealthy = false,
+                    Description = "Fried pastry dough with cream and fruit inside"
             );
             //last table Seed
             modelBuilder.Entity<Hobbies>().HasData(
@@ -91,8 +97,16 @@ namespace Team8WebAPIFinal.Data
                     Description = "Baking cookies, cakes and other desserts",
                     EstimatedHoursPerWeek = 5, 
                     SkillLevel = "Intermediate"
-                }
-                // other information here
+                },
+
+                new Hobbies
+                {
+                    Id = 2;
+                    Name = "Digital Art",
+                    Description = "Drawing art of new and existing characters on my mobile device",
+                    EstimatedHoursPerWeek = 10,
+                    Skilllevel = "Intermediate"
+                };
 
 
                 );
