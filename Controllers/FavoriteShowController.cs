@@ -22,10 +22,10 @@ namespace Team8WebAPIFinal.Controllers
             return Ok(_context.FavoriteShows.Take(5).ToList());
         }
 
-        [HttpGet("{name}")]
-        public IActionResult GetFavoriteShow(int name)
+        [HttpGet("{id}")]
+        public IActionResult GetFavoriteShow(int id)
         {
-            var show = _context.FavoriteShows.Find(name);
+            var show = _context.FavoriteShows.Find(id);
             if (show == null) return NotFound();
             return Ok(show);
         }
@@ -35,13 +35,13 @@ namespace Team8WebAPIFinal.Controllers
         {
             _context.FavoriteShows.Add(show);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(GetFavoriteShow), new { name = show.Title }, show);
+            return CreatedAtAction(nameof(GetFavoriteShow), new { id = show.Id }, show);
         }
 
         [HttpPut("{name}")]
         public IActionResult UpdateFavoriteShow(string name, FavoriteShow updatedShow)
         {
-            var show = _context.FavoriteShows.Find(name);
+            var show = _context.FavoriteShows.Find(id);
             if (show == null) return NotFound();
 
             show.Id = updatedShow.Id;
@@ -55,10 +55,10 @@ namespace Team8WebAPIFinal.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{name}")]
-        public IActionResult DeleteFavoriteShow(string name)
+        [HttpDelete("{id}")]
+        public IActionResult DeleteFavoriteShow(int id)
         {
-            var show = _context.FavoriteShows.Find(name);
+            var show = _context.FavoriteShows.Find(id);
             if (show == null) return NotFound();
 
             _context.FavoriteShows.Remove(show);
