@@ -8,5 +8,5 @@
         public required string CollegeProgram { get; set; }
         public required string YearInProgram { get; set; }
     }
-    // other classes for other tables- or new files?
+   
 }
