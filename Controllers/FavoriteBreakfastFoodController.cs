@@ -1,17 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TeamApi.Data;
-using TeamApi.Models;
+using Team8WebAPIFinal.Data;
+using Team8WebAPIFinal.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace TeamApi.Controllers
+namespace Team8WebAPIFinal.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class FavoriteBreakfastFoodsController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
 
-        public FavoriteBreakfastFoodsController(ApplicationDbContext context)
+        public FavoriteBreakfastFoodsController(AppDbContext context)
         {
             _context = context;
         }

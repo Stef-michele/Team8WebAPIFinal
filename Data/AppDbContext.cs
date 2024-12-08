@@ -25,7 +25,7 @@ namespace Team8WebAPIFinal.Data
                     Birthdate = new DateTime(1988, 08, 05),
                     CollegeProgram = "Software Development Certificate",
                     YearInProgram = "Senior"
-                }
+                },
 
                 new TeamMember
                 {
@@ -36,13 +36,14 @@ namespace Team8WebAPIFinal.Data
                     CollegeProgram = "Information Technologies",
                     YearInProgram = "Sophomore"
                 }
-               
+
 
             );
             modelBuilder.Entity<FavoriteShow>().HasData(
                 new FavoriteShow
                 {
-                    YearPublished = 1963,
+                    Id = 1,
+                    ReleaseYear = 1963,
                     Title = "Doctor Who",
                     Genre = "Sci-Fi",
                     FavoriteCharacter = "Rory Pond",
@@ -50,14 +51,16 @@ namespace Team8WebAPIFinal.Data
                 }
             );
 
-               modelBuilder.Entity<FavoriteBreakfastFood>().HasData()
+               modelBuilder.Entity<FavoriteBreakfastFood>().HasData(
                new FavoriteBreakfastFood
-                    { Id = 3,
-                      Name = "Granola", 
-                      Type = "Sweet", 
-                      IsHealthy = true, 
-                      Description = "A mix of oats, honey, and nuts, often eaten with yogurt."
+               { Id = 3,
+                   Name = "Granola",
+                   Type = "Sweet",
+                   IsHealthy = true,
+                   Description = "A mix of oats, honey, and nuts, often eaten with yogurt."
                }
+
+               );
 
                 }
 

@@ -1,4 +1,4 @@
-namespace TeamApi.Models
+namespace Team8WebAPIFinal.Models
 
 {
     public class FavoriteBreakfastFood
