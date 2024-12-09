@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using Team8WebAPIFinal.Models;
 
 namespace Team8WebAPIFinal.Data
@@ -32,8 +33,16 @@ namespace Team8WebAPIFinal.Data
                     Birthdate = new DateTime(2004, 08, 19),
                     CollegeProgram = "Information Technologies",
                     YearInProgram = "Sophomore"
-                }
-                // last data near here. will nee a comma above after adding
+                },
+                 new TeamMember
+                 {
+                     Id = 3,
+                     FullName = "Rehmat",
+                     Birthdate = new DateTime(2004, 01, 22),
+                     CollegeProgram = "Information Technologies",
+                     YearInProgram = "Sophomore"
+                     }
+
             );
 
             // Seeding favorite shows
@@ -56,8 +65,19 @@ namespace Team8WebAPIFinal.Data
                      Genre = "Sci-Fi",
                      FavoriteCharacter = "Eleven",
                      Creator = "The Duffer Brothers"
-                 }
-                 //last data here need comma above after bracket
+                 },
+                  //Rehmat seeded by Stefanie due to computer error
+                  new FavoriteShow
+                  {
+                      Id = 3,
+                      ReleaseYear = 2018,
+                      Title = "Good Girls",
+                      Genre = "Comedy-Drama",
+                      FavoriteCharacter = "Beth Boland",
+                      Creator = "Jenni Konner & Lucia Aniello"
+                  }
+
+
             );
 
             // Seeding favorite breakfast foods
@@ -87,6 +107,7 @@ namespace Team8WebAPIFinal.Data
                     Type = "Sweet",
                     IsHealthy = false,
                     Description = "Fried pastry dough with cream and fruit inside"
+                }
             );
             //last table Seed
             modelBuilder.Entity<Hobbies>().HasData(
@@ -101,13 +122,20 @@ namespace Team8WebAPIFinal.Data
 
                 new Hobbies
                 {
-                    Id = 2;
+                    Id = 2,
                     Name = "Digital Art",
                     Description = "Drawing art of new and existing characters on my mobile device",
                     EstimatedHoursPerWeek = 10,
-                    Skilllevel = "Intermediate"
-                };
-
+                    SkillLevel = "Intermediate"
+                },
+                 new Hobbies
+                 {
+                     Id = 3,
+                     Name = "Dancing",
+                     Description = "Expressing oneself through rhthmic movement, often to music.",
+                     EstimatedHoursPerWeek = 8,
+                     SkillLevel = "Intermediate"
+                 }
 
                 );
         }
