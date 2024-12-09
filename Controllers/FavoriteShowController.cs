@@ -41,7 +41,7 @@ namespace Team8WebAPIFinal.Controllers
         [HttpPut("{name}")]
         public IActionResult UpdateFavoriteShow(string name, FavoriteShow updatedShow)
         {
-            var show = _context.FavoriteShows.Find(id);
+            var show = _context.FavoriteShows.FirstOrDefault(s => s.Title == name);
             if (show == null) return NotFound();
 
             show.Id = updatedShow.Id;
